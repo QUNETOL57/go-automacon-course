@@ -1,5 +1,12 @@
 package main
 
+import (
+	"fmt"
+
+	hello2 "github.com/QUNETOL57/go-automacon-course/lesson_10/task_10_4/hello_module"
+	hello1 "github.com/QUNETOL57/go-automacon-course/lesson_10/task_10_4/hello_module_v100"
+)
+
 /*
 Необходимо создать модуль и залить в публичный репозиторий на
 https://github.com/. Модуль должен иметь функцию Hello. Используя
@@ -11,5 +18,6 @@ https://github.com/. Модуль должен иметь функцию Hello. 
 */
 
 func main() {
-
+	fmt.Println(hello1.Hello())
+	fmt.Println(hello2.Hello())
 }
