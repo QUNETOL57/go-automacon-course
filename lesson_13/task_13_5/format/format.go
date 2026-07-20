@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io"
 	"os"
+	"sort"
 )
 
 type patient struct {
@@ -50,12 +51,19 @@ func set(pathTo string, list patients) error {
 	return nil
 }
 
+func (p patients) sort() patients {
+	sort.Slice(p.List, func(i, j int) bool {
+		return p.List[i].Age < p.List[j].Age
+	})
+	return p
+}
+
 func Do(pathFrom string, pathTo string) error {
 	list, err := get(pathFrom)
 	if err != nil {
 		return err
 	}
-	err = set(pathTo, list)
+	err = set(pathTo, list.sort())
 	if err != nil {
 		return err
 	}
