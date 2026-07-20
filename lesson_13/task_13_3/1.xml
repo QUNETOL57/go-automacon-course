@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contracts>
+    <contract>
+        <number>1</number>
+        <sign_date>2023-09-02</sign_date>
+        <landlord>Остап</landlord>
+        <tenat>Шура</tenat>
+    </contract>
+    <contract>
+        <number>2</number>
+        <sign_date>2023-09-03</sign_date>
+        <landlord>Бендер</landlord>
+        <tenat>Балаганов</tenat>
+    </contract>
+</contracts>
