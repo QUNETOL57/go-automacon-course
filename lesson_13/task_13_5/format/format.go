@@ -1,19 +1,19 @@
 package format
 
 import (
-	"encoding/json"
+	"encoding/xml"
 	"io"
 	"os"
 	"sort"
 )
 
 type patient struct {
-	Name  string `json:"name"`
-	Age   int    `json:"age"`
-	Email string `json:"email"`
+	Name  string `xml:"Name"`
+	Age   int    `xml:"Age"`
+	Email string `xml:"Email"`
 }
 type patients struct {
-	List []patient
+	List []patient `xml:"Patient"`
 }
 
 func get(pathFrom string) (patients, error) {
@@ -22,7 +22,7 @@ func get(pathFrom string) (patients, error) {
 		return patients{}, err
 	}
 	defer f.Close()
-	d := json.NewDecoder(f)
+	d := xml.NewDecoder(f)
 	list := make([]patient, 0, 3)
 	for {
 		var p patient
@@ -44,7 +44,7 @@ func set(pathTo string, list patients) error {
 		return err
 	}
 	defer f.Close()
-	e := json.NewEncoder(f)
+	e := xml.NewEncoder(f)
 	if err = e.Encode(list.List); err != nil {
 		return err
 	}
@@ -63,7 +63,7 @@ func Do(pathFrom string, pathTo string) error {
 	if err != nil {
 		return err
 	}
-	err = set(pathTo, list.sort())
+	err = set(pathTo, list)
 	if err != nil {
 		return err
 	}
