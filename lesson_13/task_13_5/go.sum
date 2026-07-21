@@ -4,3 +4,7 @@ github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format v1.0.0 h1:nN
 github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format v1.0.0/go.mod h1:U64Ee3aViVJoQ/cVN8sOG/VAMNoJ92+vqUFxGAjovZs=
 github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format v1.1.0 h1:4P+6guX+BSTMoAnr+smjwlHJN3AM8es/53jE+2OGMM4=
 github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format v1.1.0/go.mod h1:U64Ee3aViVJoQ/cVN8sOG/VAMNoJ92+vqUFxGAjovZs=
+github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format/v2 v2.0.0 h1:S6W2rOFm4kPYR2qW0lM7kSnlzZ4t7Fe3YtFMIjf8AtI=
+github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format/v2 v2.0.0/go.mod h1:PwIbCvA42WR7ShNfLEMENE89og0vggvohyiyM2Dvlzo=
+github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format/v2 v2.0.1 h1:sO8z1/f8Ih/MeR3qtCXZdTZzwVJqymMbv9CSeBIUoR4=
+github.com/QUNETOL57/go-automacon-course/lesson_13/task_13_5/format/v2 v2.0.1/go.mod h1:PwIbCvA42WR7ShNfLEMENE89og0vggvohyiyM2Dvlzo=
