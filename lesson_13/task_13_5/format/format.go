@@ -1,6 +1,7 @@
 package format
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"io"
 	"os"
@@ -22,7 +23,7 @@ func get(pathFrom string) (patients, error) {
 		return patients{}, err
 	}
 	defer f.Close()
-	d := xml.NewDecoder(f)
+	d := json.NewDecoder(f)
 	list := make([]patient, 0, 3)
 	for {
 		var p patient
@@ -45,7 +46,12 @@ func set(pathTo string, list patients) error {
 	}
 	defer f.Close()
 	e := xml.NewEncoder(f)
-	if err = e.Encode(list.List); err != nil {
+	e.Indent("", " ")
+	_, err = f.WriteString(xml.Header)
+	if err != nil {
+		return err
+	}
+	if err = e.Encode(list); err != nil {
 		return err
 	}
 	return nil
