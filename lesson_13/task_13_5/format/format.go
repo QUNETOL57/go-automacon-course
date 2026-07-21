@@ -45,6 +45,7 @@ func set(pathTo string, list patients) error {
 		return err
 	}
 	defer f.Close()
+
 	e := xml.NewEncoder(f)
 	e.Indent("", " ")
 	_, err = f.WriteString(xml.Header)
