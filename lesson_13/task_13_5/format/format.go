@@ -70,7 +70,7 @@ func Do(pathFrom string, pathTo string) error {
 	if err != nil {
 		return err
 	}
-	err = set(pathTo, list)
+	err = set(pathTo, list.sort())
 	if err != nil {
 		return err
 	}
